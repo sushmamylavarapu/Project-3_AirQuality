@@ -1,5 +1,5 @@
 let weather = {
-  apiKey: "700b6b4facb43bae47bcee6869faf408",
+  apiKey: `${api_key}`,
   fetchWeather: function (city) {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?q=" +
