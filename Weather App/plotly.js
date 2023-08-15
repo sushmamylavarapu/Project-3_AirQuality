@@ -8,7 +8,7 @@ var data = [
   
   Plotly.newPlot('myDiv', data);
 
-  d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv", function(err, rows){
+  d3.csv("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=52.52&longitude=13.41&hourly=pm10,pm2_5,grass_pollen", function(err, rows){
 
   function unpack(rows, key) {
   return rows.map(function(row) { return row[key]; });
