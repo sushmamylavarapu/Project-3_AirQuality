@@ -1,4 +1,14 @@
-d3.csv("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=52.52&longitude=13.41&hourly=pm10,pm2_5,grass_pollen", function(err, rows){
+var data = [
+    {
+      x: ['2023-05-01 22:23:00', '2023-11-04 22:23:00', '2013-12-04 22:23:00'],
+      y: [1, 3, 6],
+      type: 'scatter'
+    }
+  ];
+  
+  Plotly.newPlot('myDiv', data);
+
+  d3.csv("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=52.52&longitude=13.41&hourly=pm10,pm2_5,grass_pollen", function(err, rows){
 
   function unpack(rows, key) {
   return rows.map(function(row) { return row[key]; });
