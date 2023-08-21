@@ -58,6 +58,6 @@ data.then(data => displayPlot(data));
 
 let dataSelect = d3.select("#selDataset");
 dataSelect.append("option").text("All variables");
-for(let i=0; i <)
+
 data.then(data => displayPlot(data));
 
