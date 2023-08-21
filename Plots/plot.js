@@ -1,30 +1,33 @@
-let url = "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=62.4541&longitude=-114.3725&hourly=pm10,pm2_5,carbon_monoxide,nitrogen_dioxide,sulphur_dioxide,ozone,dust&timezone=America%2FNew_York&past_days=14";
+// giving the url with Yellow Knife 
 
+let url = "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=62.4541&longitude=-114.3725&hourly=pm10,pm2_5,carbon_monoxide,nitrogen_dioxide,sulphur_dioxide,ozone,dust&timezone=America%2FNew_York&past_days=14";
+// log our data
 d3.json(url).then(data => console.log(data));
 
-
+// storing our data into a varable called data
 var data = d3.json(url);
 
-function init(ourData) {;
+
+
+// creating a function that cxreates the plot at the beginnign of the page
+function displayPlot(ourData) {
     let dataLength = ourData.hourly.time.length;
-    
     let dataset = [];
-    let data_keys = Object.keys(ourData.hourly).slice(1);
+    var data_keys = Object.keys(ourData.hourly).slice(1);
     let times = ourData.hourly.time;
     for (let i=0; i < data_keys.length; i++) {
         let item = data_keys[i];
-       dataset.push( this[item + "_dataset"] = {
+       dataset.push(this[item + "_dataset"] = {
             x: times,
             y: ourData.hourly[`${item}`],
             name: data_keys[i]
         });
     }
-    console.log(dataset);
     var layout = {
         title: {
-          text:'plot',
+          text: "Yellow Knife Particles",
           font: {
-            size: 24
+            size: 30,
           }},
           xaxis: {
             title: {
@@ -50,6 +53,11 @@ function init(ourData) {;
     Plotly.newPlot("plots", dataset, layout);
 } 
 
-data.then(data => init(data));
 
+data.then(data => displayPlot(data));
+
+let dataSelect = d3.select("#selDataset");
+dataSelect.append("option").text("All variables");
+for(let i=0; i <)
+data.then(data => displayPlot(data));
 

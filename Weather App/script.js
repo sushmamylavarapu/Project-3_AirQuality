@@ -1,4 +1,3 @@
-// console.log(config.open_weather_api_key);
 let weather = {
   apiKey: config.open_weather_api_key,
   fetchWeather: function (city) {
@@ -39,7 +38,6 @@ let weather = {
     this.fetchWeather(document.querySelector(".search-bar").value);
   },
 };
-
 document.querySelector(".search button").addEventListener("click", function () {
   weather.search();
 });
