@@ -1,6 +1,9 @@
+let url = "{1e30794b23820c8ed156da30fb6044a3}";
+d3.json(url).then(data=>console.log(data.hourly));
+
 var data = [
     {
-      x: ['2023-05-01 22:23:00', '2023-11-04 22:23:00', '2013-12-04 22:23:00'],
+      x: ['2023-05-11 22:23:00', '2023-08-14 22:23:00'],
       y: [1, 3, 6],
       type: 'scatter'
     }
@@ -8,7 +11,9 @@ var data = [
   
   Plotly.newPlot('myDiv', data);
 
-  d3.csv("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=52.52&longitude=13.41&hourly=pm10,pm2_5,grass_pollen", function(err, rows){
+  d3.csv("/Project-3_AirQuality/air-quality.csv", function(err, rows){
+    console.log(data);
+  });
 
   function unpack(rows, key) {
   return rows.map(function(row) { return row[key]; });
@@ -35,9 +40,9 @@ var data = [trace1,trace2];
 var layout = {
   title: 'Custom Range',
   xaxis: {
-    range: ['2023-07-01', '2023-08-31'],
+    range: ['2023-05-01', '2023-08-14'],
     type: 'date'
-  },
+  }
   yaxis: {
     autorange: true,
     range: [86.8700008333, 138.870004167],
@@ -45,5 +50,7 @@ var layout = {
   }
 };
 
-Plotly.newPlot('myDiv', data, layout);
-})
+Plotly.newPlot('plots', data, layout);
+
+
+

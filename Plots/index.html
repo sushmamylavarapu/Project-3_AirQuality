@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+    <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>plots</title>
@@ -18,7 +18,7 @@
     <div id="plots"></div>
     
     <!-- our JS file -->
-    <script> sec="plots.js" </script>
+    <script src="plots.js"></script>
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
@@ -27,6 +27,14 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Plotly Js -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        d3.csv("/Project-3_AirQuality/air-quality.csv", function(data) {
+            for (var i = 0; i < data.length; i++) {
+                console.log(data[i].Name);
+                console.log(data[i].Age);
+            }
+        });
+    </script>
     
 </body>
 </html>
