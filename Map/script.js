@@ -8,7 +8,7 @@ var Esri_NatGeoWorldMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/re
 	maxZoom: 16
 });
 
-
+BreezoMeter_apiKey = "e34ac2c26e1441ddbd8aa9e0a0ede2ff";
 
 // creating the AQI station_layer which gives us the live aqi labels
 var  WAQI_URL    =  "https://tiles.waqi.info/tiles/usepa-aqi/{z}/{x}/{y}.png?token=53bc2adc5156eabc20305e85d3834c90e654f646";  
@@ -16,7 +16,7 @@ var  WAQI_ATTR  =  'Air  Quality  Tiles  &copy;  <a  href="http://waqi.info">waq
 var  waqiLayer  =  L.tileLayer(WAQI_URL,  {attribution:  WAQI_ATTR});  
 
 // creating the heatmap over layer
-var Heatmap = L.tileLayer('https://tiles.breezometer.com/v1/air-quality/breezometer-aqi/current-conditions/{z}/{x}/{y}.png?key=' + (config.BreezoMeter_apiKey === '' ? alert(errorMessage) : config.BreezoMeter_apiKey), {
+var Heatmap = L.tileLayer('https://tiles.breezometer.com/v1/air-quality/breezometer-aqi/current-conditions/{z}/{x}/{y}.png?key=' + (BreezoMeter_apiKey === '' ? alert(errorMessage) : BreezoMeter_apiKey), {
             tms: false,
             opacity: 0.65,
             maxNativeZoom: 8
