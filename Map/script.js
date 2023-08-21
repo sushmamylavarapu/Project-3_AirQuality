@@ -26,7 +26,6 @@ var Heatmap = L.tileLayer('https://tiles.breezometer.com/v1/air-quality/breezome
 let baselayerMaps = {
     "OpenStreets": osmLayer,
     "NatGeo World Map": Esri_NatGeoWorldMap,
-    "sdf": Stamen_Toner
 }
 let overlayMaps = {
     "Heatmap": Heatmap,
