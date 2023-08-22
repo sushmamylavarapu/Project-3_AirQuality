@@ -42,6 +42,7 @@ Here is a step-by-step explanation of how the application works:
 2 APIs were used to complete this project. The Open Weather API was used to collect data on weather data. Open-Meteo API was used to collect data on Air quality and pollutants. 
 
 Open Weather: https://openweathermap.org/current
+
 Open-Meteo: https://open-meteo.com/en/docs/air-quality-api
 
 ## Conclusion
