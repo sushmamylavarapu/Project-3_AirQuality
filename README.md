@@ -39,6 +39,11 @@ Here is a step-by-step explanation of how the application works:
 4. The application creates a plot of air quality data for the given location.
 5. The application displays the weather data for the given location on the screen.
 
+2 APIs were used to complete this project. The Open Weather API was used to collect data on weather data. Open-Meteo API was used to collect data on Air quality and pollutants. 
+
+Open Weather: https://openweathermap.org/current
+Open-Meteo: https://open-meteo.com/en/docs/air-quality-api
+
 ## Conclusion
 
 In this project, we explored air quality data in the world, modeled air quality, and visualized the data to make it easier to understand. This project will help to raise awareness of air quality issues and promotes research into ways to improve air quality.
