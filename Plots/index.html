@@ -10,14 +10,15 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Plotly Js -->
    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-   <!-- our JS file -->
-   <script type="text/javascript" src="plot.js"></script>
    <!-- our CSS file -->
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="plots"></div>
-    <div id="selectDataset"></div>
+    <select id="selDataset" onchange="changePlot(this.value)"></select>
     
+    
+    <!-- our JS file -->
+    <script type="text/javascript" src="plot.js"></script>
 </body>
 </html>
