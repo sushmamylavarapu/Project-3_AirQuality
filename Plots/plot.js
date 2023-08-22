@@ -62,7 +62,6 @@ for (let i=0; i < cities.length; i++) {
 var baseURL = "https://air-quality-api.open-meteo.com/v1/air-quality?";
 var extraQuery = "&hourly=pm10,pm2_5,carbon_monoxide,nitrogen_dioxide,sulphur_dioxide,ozone,dust&timezone=America%2FNew_York&past_days=92"
 let url = baseURL + `latitude=${coordinates[3][0]}&longitude=${coordinates[3][1]}` +extraQuery;
-console.log(url);
 
 // creating the init() function that shows Toronto when page is loaded
 function init() {
