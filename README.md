@@ -4,7 +4,8 @@ This project is about exploring air quality data in the world. We will use the [
 
 ## Data
 
-The data for this project is from https://open-meteo.com/. The data includes the AQI and other pollutants, such as PM2.5, ozone, carbon monoxide, and sulfur dioxide.
+The data for this project is from https://open-meteo.com/ 
+It includes the AQI and other pollutants, such as PM2.5, ozone, carbon monoxide, and sulfur dioxide.
 
 ## Exploratory Data Analysis
 
@@ -16,17 +17,19 @@ We will visualize the data to make it easier to understand. We will create maps 
 
 The application is divided into three files:
 
-1.`Weather App/script.js`: This file contains the code for the weather app. It fetches weather data from the OpenWeatherMap API and displays it on the screen.
-2. `Map/script.js`: This file contains the code for the map visualization. It creates a map of the world and adds layers for air quality data and AQI stations.
-3. `Plots/plot.js`: This file contains the code for the plot visualization. It creates a plot of air quality data for a given location.
+1. Weather App/script.js: This file contains the code for the weather app. It fetches weather data from the OpenWeatherMap API and displays it on the screen.
+
+2. Map/script.js: This file contains the code for the map visualization. It creates a map of the world and adds layers for air quality data and AQI stations.
+
+3. Plots/plot.js: This file contains the code for the plot visualization. It creates a plot of air quality data for a given location.
 
 To run the application, you will need to install the following dependencies:
 
-* `d3`: A JavaScript library for data visualization
-* `leaflet`: A JavaScript library for creating interactive maps
-* `plotly.js`: A JavaScript library for creating interactive plots
+* d3: A JavaScript library for data visualization
+* leaflet: A JavaScript library for creating interactive maps
+* plotly.js: A JavaScript library for creating interactive plots
 
-Once you have installed the dependencies, you can run the application by opening the `index.html` file in a web browser.
+Once you have installed the dependencies, you can run the application by opening the index.html file in a web browser.
 
 Here is a step-by-step explanation of how the application works:
 
